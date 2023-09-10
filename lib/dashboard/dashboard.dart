@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rccg_cod/authentication/screen/login.dart';
 import 'package:rccg_cod/dashboard/donate/donate.dart';
 import 'package:rccg_cod/dashboard/home/home.dart';
 import 'package:rccg_cod/dashboard/navbar_item.dart';
+import 'package:rccg_cod/navdrawer_pages/about_us/about_us.dart';
 import 'package:rccg_cod/navdrawer_pages/devotionals/devotional.dart';
+import 'package:rccg_cod/navdrawer_pages/testimony/testimony.dart';
 import 'package:rccg_cod/utils/constants.dart';
 import '../navdrawer_pages/books/books.dart';
 import '../navdrawer_pages/profile/profile.dart';
@@ -92,12 +95,12 @@ class _DashboardState extends State<Dashboard> {
             ),
             const NavbarItem(
                 icon: Icons.person, title: "Profile", widget: Profile()),
+            // const NavbarItem(
+            //     icon: Icons.video_collection,
+            //     title: "Gallery",
+            //     widget: Profile()),
             const NavbarItem(
-                icon: Icons.video_collection,
-                title: "Gallery",
-                widget: Profile()),
-            const NavbarItem(
-                icon: Icons.comment, title: "Testimony", widget: Profile()),
+                icon: Icons.comment, title: "Testimony", widget: Testimony()),
             const NavbarItem(
                 icon: Icons.library_books, title: "Books", widget: Books()),
             const NavbarItem(
@@ -109,9 +112,9 @@ class _DashboardState extends State<Dashboard> {
             const NavbarItem(
                 icon: Icons.info_outline,
                 title: "About COD",
-                widget: Profile()),
+                widget: AboutUs()),
             const NavbarItem(
-                icon: Icons.logout, title: "Logout", widget: Profile()),
+                icon: Icons.logout, title: "Logout", widget: LoginScreen()),
           ],
         ),
       ),

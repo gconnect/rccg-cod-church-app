@@ -1,0 +1,32 @@
+const String aboutUs = """
+The City of David-Eket is a special parish of the Redeemed Christian Church of God, Akwa-Ibom State, youth Province 5 Founded in November 2007 by a special mandate from the General Overseer of REDEEMED CHRISTIAN CHURCH OF GOD-The Youth Assembly is fulfilling its mission of bringing the Word of God to the youths, empowering them to rise above the limitations of age, environment, and social class.
+
+DEPARTMENTS IN CHURCH
+1 CHURCH OFFICE
+2 SEED OF DAVID
+3 TREASURES IN EARTHEN VESSEL
+4 ASSET MANAGEMENT
+5 SUNDAY SCHOOL
+6 LEAVES & APRON
+7 BEAUTIFICATION8 HOLY POLICE9 SAVOURY MEAT
+10 GUIDANCE AND COUNSELLING
+11 ACTS 29
+12 EVANGELISM
+13 LOGISTICS
+14 DANCE
+15 HOUSE FELLOWSHIP
+16 MOUTH OF BABES AND SUCKLINGS (CHOIR)
+16 PUBLICATION
+17 NEW CREATION REALITY
+18 USHERING & PROTOCOL
+19 SPORTS
+20 FOLLOW-UP
+21 MULTIMEDIA
+22 UNDERSTOOD BY BOOKS (UBB)
+28 HOSPITALITY
+29 POWER AND SOUND
+30 AUDIT
+31 PRAYER
+32 WELFARE
+33 ACCOUNTS
+""";

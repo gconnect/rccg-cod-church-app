@@ -14,10 +14,10 @@ class NearMeCard extends StatefulWidget {
       required this.image});
 
   @override
-  State<NearMeCard> createState() => _EventCardState();
+  State<NearMeCard> createState() => _NearMeCardState();
 }
 
-class _EventCardState extends State<NearMeCard> {
+class _NearMeCardState extends State<NearMeCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
