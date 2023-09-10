@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rccg_cod/dashboard/home/home.dart';
 import 'package:rccg_cod/utils/constants.dart';
 
-class Devotionals extends StatelessWidget {
-  const Devotionals({super.key});
+class DevotionalSection extends StatelessWidget {
+  const DevotionalSection({super.key});
 
   @override
   Widget build(BuildContext context) {

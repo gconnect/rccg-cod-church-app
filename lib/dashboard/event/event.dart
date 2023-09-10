@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:rccg_cod/dashboard/event/parish/parish.dart';
 import 'package:rccg_cod/dashboard/mesage/audio_message/audio_meesage_list.dart';
 import 'package:rccg_cod/dashboard/mesage/video_message/video_meesage_list.dart';
 import 'package:rccg_cod/utils/constants.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
-class Message extends StatefulWidget {
-  const Message({super.key});
+class Event extends StatefulWidget {
+  const Event({super.key});
 
   @override
-  State<Message> createState() => _MessageState();
+  State<Event> createState() => _EventState();
 }
 
-class _MessageState extends State<Message> {
-
+class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
-    return  DefaultTabController(
-      length: 2,
+    return DefaultTabController(
+      length: 5,
       child: Scaffold(
         backgroundColor: bodyBackgroundColor,
         appBar: AppBar(
@@ -24,15 +24,21 @@ class _MessageState extends State<Message> {
           backgroundColor: bodyBackgroundColor,
           bottom: const TabBar(
             tabs: [
-              Tab( text: "Video Messages"),
-              Tab( text: "Audio Messages")
+              Tab(text: "Parish"),
+              Tab(text: "Zone"),
+              Tab(text: "Province"),
+              Tab(text: "Regional"),
+              Tab(text: "National"),
             ],
           ),
         ),
         body: const TabBarView(
           children: [
-            VideoMessageList(),
-            AudioMessageList()
+            Parish(),
+            Parish(),
+            Parish(),
+            Parish(),
+            Parish(),
           ],
         ),
       ),

@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:rccg_cod/dashboard/mesage/audio_message/audio_meesage_list.dart';
 import 'package:rccg_cod/dashboard/mesage/video_message/video_meesage_list.dart';
+import 'package:rccg_cod/dashboard/near_me/parish/parish_near_me.dart';
 import 'package:rccg_cod/utils/constants.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
-class Message extends StatefulWidget {
-  const Message({super.key});
+class NearMe extends StatefulWidget {
+  const NearMe({super.key});
 
   @override
-  State<Message> createState() => _MessageState();
+  State<NearMe> createState() => _NearMeState();
 }
 
-class _MessageState extends State<Message> {
+class _NearMeState extends State<NearMe> {
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +25,15 @@ class _MessageState extends State<Message> {
           backgroundColor: bodyBackgroundColor,
           bottom: const TabBar(
             tabs: [
-              Tab( text: "Video Messages"),
-              Tab( text: "Audio Messages")
+              Tab( text: "Parish"),
+              Tab( text: "House Fellowship")
             ],
           ),
         ),
         body: const TabBarView(
           children: [
-            VideoMessageList(),
-            AudioMessageList()
+            ParishNearMe(),
+            ParishNearMe()
           ],
         ),
       ),

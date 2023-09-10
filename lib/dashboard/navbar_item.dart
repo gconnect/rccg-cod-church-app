@@ -1,17 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rccg_cod/utils/constants.dart';
+import '../navdrawer_pages/books/books.dart';
 
 class NavbarItem extends StatelessWidget {
   final IconData icon;
   final String title;
-
-  const NavbarItem({super.key, required this.icon, required this.title});
+  final Widget widget;
+  const NavbarItem({super.key, required this.icon, required this.title, required this.widget});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: () => {
+      Navigator.push(context,
+            MaterialPageRoute(builder: (builder) => widget)),
+      },
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Container(

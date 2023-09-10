@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rccg_cod/dashboard/home/devotionals.dart';
+import 'package:rccg_cod/dashboard/home/devotional_section.dart';
 import 'package:rccg_cod/dashboard/home/latest_messages.dart';
 import 'package:rccg_cod/dashboard/home/menu_section.dart';
 import 'package:rccg_cod/dashboard/home/upcoming_events.dart';
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           YoutubeLiveStream(),
           MenuSection(),
           LatestMessages(),
-          Devotionals(),
+          DevotionalSection(),
           UpcomingEvents()
         ],),
       );
