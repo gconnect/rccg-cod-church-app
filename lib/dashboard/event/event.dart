@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rccg_cod/dashboard/custom_drawer.dart';
 import 'package:rccg_cod/dashboard/event/parish/parish.dart';
 import 'package:rccg_cod/dashboard/mesage/audio_message/audio_meesage_list.dart';
 import 'package:rccg_cod/dashboard/mesage/video_message/video_meesage_list.dart';
@@ -20,8 +21,10 @@ class _EventState extends State<Event> {
       child: Scaffold(
         backgroundColor: bodyBackgroundColor,
         appBar: AppBar(
+          title: const Text("Event"),
           automaticallyImplyLeading: false,
           backgroundColor: bodyBackgroundColor,
+          leading: const Icon(Icons.notifications_none_outlined),
           bottom: const TabBar(
             tabs: [
               Tab(text: "Parish"),
@@ -32,6 +35,7 @@ class _EventState extends State<Event> {
             ],
           ),
         ),
+        endDrawer: const CustomDrawer(),
         body: const TabBarView(
           children: [
             Parish(),

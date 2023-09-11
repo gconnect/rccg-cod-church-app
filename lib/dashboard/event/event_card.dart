@@ -17,7 +17,7 @@ class _EventCardState extends State<EventCard> {
       margin: const EdgeInsets.all(8),
       child: Column(children: [
          Container(
-           // margin: const EdgeInsets.all(8),
+           margin: const EdgeInsets.only(left:10.0, right: 10.0),
            child: Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: [
@@ -34,7 +34,7 @@ class _EventCardState extends State<EventCard> {
               ],),
             ),
             const SizedBox(width: 10,),
-            Expanded(child: Image(image: AssetImage(widget.eventflier)))
+            Expanded(child: Image(image: AssetImage(widget.eventflier),))
         ],),
          ),
         Divider(color: Colors.purple.shade500,)

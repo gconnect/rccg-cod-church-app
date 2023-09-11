@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
 import 'package:rccg_cod/navdrawer_pages/books/book_card.dart';
 import 'package:rccg_cod/utils/constants.dart';
-
 import 'book_datasource.dart';
-import 'book_detail.dart';
 
 class Books extends StatelessWidget {
   const Books({super.key});
@@ -46,7 +43,7 @@ class Books extends StatelessWidget {
               itemCount: books.length, // Number of items in the grid
               itemBuilder: (BuildContext context, int index) {
                 // You can return any widget for each grid item
-                return Expanded(child: BookCard(name: books[index].name, image: books[index].image));
+                return BookCard(name: books[index].name, image: books[index].image);
               },
             ),
           )

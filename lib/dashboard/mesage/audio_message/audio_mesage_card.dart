@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rccg_cod/dashboard/home/live_stream.dart';
-import 'package:rccg_cod/utils/constants.dart';
 
 class AudioMessageCard extends StatefulWidget {
   const AudioMessageCard({super.key});
@@ -13,34 +12,44 @@ class AudioMessageCard extends StatefulWidget {
 class _AudioMessageCardState extends State<AudioMessageCard> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      children: [
-        Row(children: [
-          LiveStream(),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(24),
-              child:  Column(children: [
-                const Text("God's Kingdom and his...", style: TextStyle(fontWeight: FontWeight.bold),),
-                const SizedBox(height: 5,),
-                const Text("By Pastor E. A. Adeboye"),
-                const SizedBox(height: 30,),
-                Container(
-                  margin: EdgeInsets.all(8),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                    Text("27th Feb, 2023"),
-                    Text("303Mb"),
-                  ],),
+    return  Container(
+      margin: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Row(
+            children: [
+            Container(
+              width: 150,
+                height: 150,
+                child: const LiveStream()),
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.all(24),
+                child:  const Column(children: [
+                  Text("God's Kingdom and his...", style: TextStyle(fontWeight: FontWeight.bold),),
+                  SizedBox(height: 5,),
+                  Text("By Pastor E. A. Adeboye"),
+                  SizedBox(height: 30,),
+                ],
                 ),
-              ],
               ),
             ),
-          ),
-        ],),
-        Divider(color: Colors.purple.shade700,)
-      ],
+            Row(children: [
+              GestureDetector(
+                onTap: () =>{
+                  print("fav")
+                },
+                  child: const Icon(Icons.favorite_border)
+              ),
+              GestureDetector(
+                onTap: () =>{},
+                  child: const Icon(Icons.more_vert)
+              )
+            ],)
+          ],),
+          Divider(color: Colors.purple.shade700,)
+        ],
+      ),
     );
   }
 }

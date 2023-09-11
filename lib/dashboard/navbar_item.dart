@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rccg_cod/utils/constants.dart';
 import '../navdrawer_pages/books/books.dart';
 
 class NavbarItem extends StatelessWidget {
@@ -20,7 +21,7 @@ class NavbarItem extends StatelessWidget {
         child: Container(
           height: 50,
           margin: const EdgeInsets.only(left: 10),
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: Colors.purple.shade900),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: bodyBackgroundColor),
           child: Row(children: [
           const SizedBox(width: 10,),
           Icon(icon),

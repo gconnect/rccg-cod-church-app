@@ -15,7 +15,7 @@ class MenuCard extends StatelessWidget {
       child: Container(
         width: 180,
         height: 150,
-        decoration: BoxDecoration(border: Border.all(color: Colors.purpleAccent), borderRadius: BorderRadius.circular(8)  ),
+        decoration: BoxDecoration(border: Border.all(color: Colors.deepPurple), borderRadius: BorderRadius.circular(8)  ),
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(

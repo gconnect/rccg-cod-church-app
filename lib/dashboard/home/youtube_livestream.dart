@@ -61,25 +61,44 @@ class _YoutubeLiveStreamState extends State<YoutubeLiveStream> {
 
   @override
   Widget build(BuildContext context) {
-    return YoutubePlayer(
-      width: double.infinity,
-      controller: _controller,
-      liveUIColor: Colors.amber,
-      onReady: () => {
-        PlayerState.values == PlayerState.playing
-            ? _controller.pause()
-            : _controller.play()
-      },
-      bottomActions: [
-        CurrentPosition(),
-        ProgressBar(isExpanded: true),
-        // TotalDuration(),
+    return Stack(
+      children: [
+        YoutubePlayer(
+          width: double.infinity,
+          controller: _controller,
+          liveUIColor: Colors.amber,
+          onReady: () => {
+            PlayerState.values == PlayerState.playing
+                ? _controller.pause()
+                : _controller.play()
+          },
+          bottomActions: [
+            CurrentPosition(),
+            ProgressBar(isExpanded: true),
+            // TotalDuration(),
+          ],
+        ),
+        Positioned(
+          bottom: 10,
+          left: 10,
+          child: Container(
+            width: 140,
+            height: 35,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 2),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(children: [
+                Icon(Icons.circle, color: Colors.red, size: 16,),
+                SizedBox(width: 10.0,),
+                Text("Live Stream", style: TextStyle(fontWeight: FontWeight.bold),)
+              ],),
+            ),
+          ),
+        )
       ],
     );
   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const CircularProgressIndicator();
-// }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rccg_cod/dashboard/custom_drawer.dart';
 import 'package:rccg_cod/dashboard/mesage/audio_message/audio_meesage_list.dart';
 import 'package:rccg_cod/dashboard/mesage/video_message/video_meesage_list.dart';
 import 'package:rccg_cod/utils/constants.dart';
@@ -20,6 +21,8 @@ class _MessageState extends State<Message> {
       child: Scaffold(
         backgroundColor: bodyBackgroundColor,
         appBar: AppBar(
+          title: const Text("Message"),
+          leading: const Icon(Icons.notifications_none_outlined),
           automaticallyImplyLeading: false,
           backgroundColor: bodyBackgroundColor,
           bottom: const TabBar(
@@ -29,6 +32,7 @@ class _MessageState extends State<Message> {
             ],
           ),
         ),
+        endDrawer: const CustomDrawer(),
         body: const TabBarView(
           children: [
             VideoMessageList(),

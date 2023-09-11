@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rccg_cod/authentication/recover_password.dart/recover_password_email_input.dart';
+import 'package:rccg_cod/dashboard/donate/donate.dart';
 import 'package:rccg_cod/dashboard/home/menu_card.dart';
+import 'package:rccg_cod/dashboard/near_me/near_me.dart';
+import 'package:rccg_cod/navdrawer_pages/books/books.dart';
 
 class MenuSection extends StatelessWidget {
   const MenuSection({super.key});
@@ -14,17 +17,17 @@ class MenuSection extends StatelessWidget {
         child: const Row(
           children: [
             MenuCard(menuIcon: Icons.volunteer_activism_outlined, text: "Donate Online",
-            action: ReceoverPasswordEmailInput()),
+            action: Donate()),
             SizedBox(
               width: 20,
             ),
             MenuCard(menuIcon: Icons.location_on, text: "Near Me",
-            action:  ReceoverPasswordEmailInput()),
+            action:  NearMe()),
             SizedBox(
               width: 20,
             ),
             MenuCard(menuIcon: Icons.library_books_outlined, text: "Books",
-            action:  ReceoverPasswordEmailInput()),
+            action:  Books()),
           ],
         ),
       ),
